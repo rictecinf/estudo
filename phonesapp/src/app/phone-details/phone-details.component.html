@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <h1 class="my-4">{{phone?.brand}} {{phone?.model}}
+    </h1>
+    <div class="row">
+        <div class="col-md-8">
+            <img class="img-fluid" src="{{phone?.photo}}" alt="foto">
+        </div>
+        <div class="col-md-4">
+            <h3 class="my-3">Preço R$ {{phone?.price}}</h3>
+            <p>{{phone?.date}}</p>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <h3>Listagem de smarthphones</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Foto</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Preço R$</th>
+            <th scope="col">Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let phone of phoneList; let i = index">
+            <td scope="row">{{i+1}}</td>
+            <td><img alt="foto" src="{{phone.photo}}"></td>
+            <td>{{phone.model}}</td>
+            <td>{{phone.brand}}</td>
+            <td>{{phone.price}}</td>
+            <td><a class="nav-item nav-link" [routerLink]="['','details', phone.code]">ver detalhes</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
